@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head')%>
+<body >
+   
+    <%- include('../partials/header')%>
+    <main class="main-second">
+
+        <% for (let i = 0; i < usuarios.length; i++){ %> 
+           
+                
+    <section class="product-box">
+        <br>
+        <a href="/user/usersDetail/<%=usuarios[i].id%>">
+
+            <figure class="product-box_image">
+            </figure>
+            <article class="product-box_data">
+                <img src="/img/avatars/<%=usuarios[i].avatar %>" alt="" width="200" height="150">
+                <br>
+                <br>
+                <p>NOMBRE: <%=usuarios[i].firstName%></p>
+                <br>
+                <p>APELLIDO: <%=usuarios[i].lastName %></p>
+                <br>
+                <p>USUARIO:  <%=usuarios[i].userName%></p>
+                <br>
+                <p>USUARIO:  <%=usuarios[i].email%></p>
+               
+            </article>
+            </a>
+            <br>
+        </section>
+        <% } %> 
+        
+    </main>
+    <%- include ('../partials/footer')%>
+</body>
+</html>
